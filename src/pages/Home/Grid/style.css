@@ -1,0 +1,94 @@
+
+.fade-in-section {
+	opacity: 0;
+	transform: translateX(10vw);
+	visibility: hidden;
+	transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+	will-change: opacity, visibility;
+}
+	
+.fade-in-section.is-visible {
+	opacity: 1;
+	transform: none;
+	visibility: visible;
+}
+
+.boxes-grid {
+	display: grid;
+	grid-template-columns: auto auto;
+	align-items: center;
+	justify-content: center;
+}
+
+.boxes {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 100px;
+	margin: 10px;
+	width: 20vw;
+	height: 30vh;
+	outline: 1px solid #9A9A9A;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.boxes:hover {
+	box-shadow: 5px 5px 50px 5px #9A9A9A;
+	transition: 0.1s;
+}
+
+.boxes h2.text {
+	opacity: 0;
+}
+
+.boxes img {
+	opacity: 1;
+}
+
+.boxes:hover img {
+	transform: scale(1.2);
+	opacity: 1;
+	cursor: pointer;
+	transition: 0.7s;
+}
+
+.boxes span {
+	background-color: rgb(53, 52, 52);
+	font-size: 15px;
+	align-items: center;
+	color: #FFF;
+	opacity: 0;
+	position: absolute;
+	left: -15%;
+	top: 75%;
+	padding: 10px 10px 10px 150px;
+	font-weight: 100;
+	z-index: 3;
+}
+
+.boxes:hover span {
+	opacity: 1;
+	left: 0;
+	transition: 1s;
+}
+
+/*
+	Overlay effect.
+*/
+
+.boxes .overlay {
+	background-color: #9A9A9A;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 20vw;
+	height: 30vh;
+	z-index: 2;
+	opacity: 0;
+}
+
+.boxes:hover .overlay {
+	opacity: 0.5;
+	transition: 0.2s;
+}
