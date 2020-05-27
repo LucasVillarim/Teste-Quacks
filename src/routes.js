@@ -1,7 +1,5 @@
 import React from 'react';
-import { useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import scrollToTop from './scrollToTop';
 
 import Home from './pages/Home/index';
 import Header from './header/index';
